@@ -2,7 +2,14 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="margin-top: 100px;">
+    <form class="row g-4" action="" role="form">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="key" placeholder="Tìm kiếm">
+            <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+        </div>
+    </form>
+    <hr>
     <div class="card">
         <div class="card-header">
             <div class="row">

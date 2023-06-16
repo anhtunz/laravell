@@ -13,6 +13,9 @@ class SinhvienController extends Controller
     public function index()
     {
         $sinhvien= Sinhvien::paginate(5);
+        if ($key = request()->key) {
+            $sinhvien = Sinhvien::where('MaSV', 'like', '%' . $key . '%')->paginate(5);
+        }
         return view('index', compact('sinhvien'))->with('i', (request()->input('page', 1)-1)*5);
     }
 
